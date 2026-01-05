@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptum"
+version = "0.1.0"
+description = "Opinionated security primitives for application-level token and secret handling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Cryptum Developers"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "cryptography>=41.0.0",
+    "argon2-cffi>=23.1.0",
+    "PyJWT>=2.8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["cryptum*"]
+
+[tool.setuptools.package-data]
+cryptum = ["py.typed"]
